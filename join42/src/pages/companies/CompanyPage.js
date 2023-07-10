@@ -27,28 +27,9 @@ const CompanyComponent = () => {
   };
 
   return (
-    <div>
-      <h2>Section 1: List of Companies</h2>
-      <Button type="primary" onClick={handleViewProfile}>
-        View Company Profile
-      </Button>
-      <Button type="primary" onClick={handleOpenings}>
-        Number of Openings
-      </Button>
-
-      <h2>Section 2: Open any Company</h2>
-      <Button type="primary" onClick={handleViewJobPostings}>
-        View Job Postings
-      </Button>
-      <Button type="primary" onClick={handleContactDetails}>
-        Contact Details
-      </Button>
-      <Button type="primary" onClick={handleMetrics}>
-        Metrics
-      </Button>
-      <Button type="primary" onClick={handleInviteRecruitmentDrive}>
-        Invite for Recruitment Drive
-      </Button>
+    <div style={{display:'flex',justifyContent:'center'}}>
+      <h2 style={{color:"black"}}>Company Page</h2>
+      {/* Additional content */}
     </div>
   );
 };
