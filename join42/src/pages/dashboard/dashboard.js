@@ -1,14 +1,13 @@
 import React from 'react';
 
-const CalendarComponent = () => {
+const Dashboard = () => {
   // Your component logic and JSX here
   return (
     <div style={{display:'flex',justifyContent:'center'}}>
-      {/* <JobPostingListPage /> */}
-      <CalendarComponent />
+      <h2 style={{color:"black"}}>Dashboard</h2>
       {/* Additional content */}
     </div>
   );
 };
 
-export default CalendarComponent;
+export default Dashboard;

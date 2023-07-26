@@ -6,19 +6,29 @@ const JobPostingListPage = () => {
   const [jobPostings, setJobPostings] = useState([]);
 
   useEffect(() => {
-    // Simulating data fetching
+    // Simulating API call delay with setTimeout
     setTimeout(() => {
-      const mockData = [
-        { id: 1, title: 'Job Posting 1', company: 'Company A' },
-        { id: 2, title: 'Job Posting 2', company: 'Company B' },
-        { id: 3, title: 'Job Posting 3', company: 'Company C' },
-        { id: 4, title: 'Job Posting 4', company: 'Company D' },
-        { id: 5, title: 'Job Posting 5', company: 'Company E' },
+      const data = [
+        {
+          id: 1,
+          title: 'Frontend Developer',
+          company: 'ABC Tech Solutions',
+        },
+        {
+          id: 2,
+          title: 'Software Engineer',
+          company: 'XYZ Software',
+        },
+        {
+          id: 3,
+          title: 'Data Analyst',
+          company: 'Data Co.',
+        },
       ];
 
-      setJobPostings(mockData);
+      setJobPostings(data);
       setLoading(false);
-    }, 1500);
+    }, 1500); // Simulating a 1.5-second delay
   }, []);
 
   return (
@@ -33,7 +43,7 @@ const JobPostingListPage = () => {
             <List.Item>
               <List.Item.Meta
                 avatar={<Avatar src="https://via.placeholder.com/50" />}
-                title={<a href="#">{jobPosting.title}</a>}
+                title={<a href={`/jobs/${jobPosting.id}`}>{jobPosting.title}</a>}
                 description={jobPosting.company}
               />
             </List.Item>
