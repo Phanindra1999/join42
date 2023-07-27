@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Avatar, Typography, Row, Col, Statistic } from 'antd';
+import { Card, Typography, Row, Col, Statistic } from 'antd';
 import {
   EnvironmentFilled,
   TeamOutlined,
@@ -77,17 +77,33 @@ const InstituteComponent = () => {
                 boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
                 borderRadius: '8px',
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
+                justifyContent: 'center',
                 padding: '8px 12px',
                 background: '#fff',
               }}
             >
-              <div style={{ marginRight: '12px', fontSize: '16px' }}>{metric.icon}</div>
-              <div>
-                <Title level={5} style={{ margin: 0, display: 'inline-block' }}>
-                  {metric.title}
-                </Title>
-                <Paragraph style={{ margin: 0 }}>{metric.value}</Paragraph>
+              <div
+                style={{
+                  fontSize: '24px',
+                  color: '#1890ff',
+                  marginBottom: '8px',
+                  flex: '1',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {metric.value}
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ marginRight: '12px', fontSize: '16px' }}>{metric.icon}</div>
+                <div>
+                  <Title level={5} style={{ margin: 0 }}>
+                    {metric.title}
+                  </Title>
+                </div>
               </div>
             </Card>
           </Col>

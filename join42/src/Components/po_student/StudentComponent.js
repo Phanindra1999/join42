@@ -7,7 +7,7 @@ import {
   SearchOutlined,
   FilterOutlined,
 } from '@ant-design/icons';
-import Highlighter from 'react-highlight-words'; // Add this line
+import Highlighter from 'react-highlight-words';
 
 const { Title } = Typography;
 const { Search } = Input;
@@ -104,19 +104,31 @@ const StudentComponent = () => {
           boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
           borderRadius: '8px',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
+          justifyContent: 'center',
           padding: '8px 12px',
           background: '#fff',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div style={{ marginRight: '12px', fontSize: '24px' }}>{icon}</div>
-            <Title level={5} style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>
-              {title}
-            </Title>
-          </div>
-          <div style={{ fontSize: '24px', marginTop: '8px', color: '#1890ff' }}>{value}</div>
+        <div
+          style={{
+            fontSize: '24px',
+            color: '#1890ff',
+            marginBottom: '8px',
+            flex: '1',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {value}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ marginRight: '12px', fontSize: '24px' }}>{icon}</div>
+          <Title level={5} style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>
+            {title}
+          </Title>
         </div>
       </Card>
     );
@@ -177,16 +189,16 @@ const StudentComponent = () => {
             </Title>
             <Row gutter={[16, 16]}>
               <Col xs={24} sm={12} md={6} lg={6}>
-                {renderStatisticCard(<UserOutlined />, '500', 'Total Students')}
+                {renderStatisticCard(<UserOutlined />, 'Total Students', '500')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                {renderStatisticCard(<CheckCircleOutlined />, '450', 'Placed Students')}
+                {renderStatisticCard(<CheckCircleOutlined />, 'Placed Students', '450')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                {renderStatisticCard(<DollarCircleOutlined />, '₹8,00,000', 'Average Salary')}
+                {renderStatisticCard(<DollarCircleOutlined />, 'Average Salary', '₹8,00,000')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                {renderStatisticCard(<DollarCircleOutlined />, '₹12,00,000', 'Highest Salary')}
+                {renderStatisticCard(<DollarCircleOutlined />, 'Highest Salary', '₹12,00,000')}
               </Col>
             </Row>
           </Card>

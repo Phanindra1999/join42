@@ -109,6 +109,45 @@ const AlumniComponent = () => {
     setSearchText('');
   };
 
+  const renderStatisticCard = (icon, title, value) => {
+    return (
+      <Card
+        style={{
+          boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+          borderRadius: '8px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '8px 12px',
+          background: '#fff',
+        }}
+      >
+        <div
+          style={{
+            fontSize: '24px',
+            color: '#1890ff',
+            marginBottom: '8px',
+            flex: '1',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {value}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ marginRight: '12px', fontSize: '16px' }}>{icon}</div>
+          <div>
+            <Title level={5} style={{ margin: 0 }}>
+              {title}
+            </Title>
+          </div>
+        </div>
+      </Card>
+    );
+  };
+
   const columns = [
     {
       title: 'Alumni Name',
@@ -171,92 +210,16 @@ const AlumniComponent = () => {
             </Title>
             <Row gutter={[16, 16]}>
               <Col xs={24} sm={12} md={6} lg={6}>
-                <Card
-                  style={{
-                    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '8px 12px',
-                    background: '#fff',
-                  }}
-                >
-                  <div style={{ marginRight: '12px', fontSize: '16px' }}>
-                    <UserOutlined />
-                  </div>
-                  <div>
-                    <Title level={5} style={{ margin: 0 }}>
-                      Total Alumni
-                    </Title>
-                    <div>1000</div>
-                  </div>
-                </Card>
+                {renderStatisticCard(<UserOutlined />, 'Total Alumni', '1000')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                <Card
-                  style={{
-                    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '8px 12px',
-                    background: '#fff',
-                  }}
-                >
-                  <div style={{ marginRight: '12px', fontSize: '16px' }}>
-                    <CheckCircleOutlined />
-                  </div>
-                  <div>
-                    <Title level={5} style={{ margin: 0 }}>
-                      Placed Alumni
-                    </Title>
-                    <div>900</div>
-                  </div>
-                </Card>
+                {renderStatisticCard(<CheckCircleOutlined />, 'Placed Alumni', '900')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                <Card
-                  style={{
-                    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '8px 12px',
-                    background: '#fff',
-                  }}
-                >
-                  <div style={{ marginRight: '12px', fontSize: '16px' }}>
-                    <DollarCircleOutlined />
-                  </div>
-                  <div>
-                    <Title level={5} style={{ margin: 0 }}>
-                      Average Salary
-                    </Title>
-                    <div>₹10,00,000</div>
-                  </div>
-                </Card>
+                {renderStatisticCard(<DollarCircleOutlined />, 'Average Salary', '₹10,00,000')}
               </Col>
               <Col xs={24} sm={12} md={6} lg={6}>
-                <Card
-                  style={{
-                    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-                    borderRadius: '8px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '8px 12px',
-                    background: '#fff',
-                  }}
-                >
-                  <div style={{ marginRight: '12px', fontSize: '16px' }}>
-                    <DollarCircleOutlined />
-                  </div>
-                  <div>
-                    <Title level={5} style={{ margin: 0 }}>
-                      Highest Salary
-                    </Title>
-                    <div>₹15,00,000</div>
-                  </div>
-                </Card>
+                {renderStatisticCard(<DollarCircleOutlined />, 'Highest Salary', '₹15,00,000')}
               </Col>
             </Row>
           </Card>
