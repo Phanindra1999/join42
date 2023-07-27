@@ -1,13 +1,13 @@
 import React from 'react';
+import AlumniComponent from '../../../Components/po_alumni/AlumniComponent';
 
-const Institute = () => {
+const Alumni = () => {
   // Your component logic and JSX here
   return (
     <div style={{display:'flex',justifyContent:'center'}}>
-      <h2 style={{color:"black"}}>Institute Page</h2>
-      {/* Additional content */}
+     <AlumniComponent />
     </div>
   );
 };
 
-export default Institute;
+export default Alumni;

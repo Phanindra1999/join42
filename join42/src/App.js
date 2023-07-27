@@ -1,14 +1,14 @@
-import JobPostingsPage from './pages/job_postings/JobPostingsPage';
-import CompanyComponent from './pages/companies/CompanyPage';
-import StudentPage from './pages/students/StudentPage';
-import Announcements from './pages/announcements/Announcements';
-import Calendar from './pages/calendar/Calendar';
-import Alumni from './pages/alumni/Alumni';
-import SettingsPage from './pages/settings/SettingsPage';
-import Institute from './pages/institute/Institute';
-import PlacementOfficerPage from './pages/placement_officer/PlacementOfficerPage';
-import NotificationService from './pages/notification_service/NotificationService';
-import Dashboard from './pages/dashboard/dashboard';
+import JobPostingsPage from './pages/placement_officer/job_postings/JobPostingsPage';
+import CompanyComponent from './pages/placement_officer/companies/CompanyPage';
+import StudentPage from './pages/placement_officer/students/StudentPage';
+import Announcements from './pages/placement_officer/announcements/Announcements';
+import Calendar from './pages/placement_officer/calendar/Calendar';
+import Alumni from './pages/placement_officer/alumni/Alumni';
+import SettingsPage from './pages/placement_officer/settings/SettingsPage';
+import Institute from './pages/placement_officer/institute/Institute';
+import PlacementOfficerPage from './pages/placement_officer/placement_officer/PlacementOfficerPage';
+import NotificationService from './pages/placement_officer/notification_service/NotificationService';
+import Dashboard from './pages/placement_officer/dashboard/dashboard';
 
 
 import React, { useState } from 'react';
@@ -22,6 +22,7 @@ import {
   UserOutlined,
   SettingOutlined,
   InfoCircleOutlined,
+  DashboardOutlined
 } from '@ant-design/icons';
 
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
@@ -41,7 +42,7 @@ const App = () => {
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={collapsed} onCollapse={toggleCollapsed}>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-          <Menu.Item key="1" icon={<UnorderedListOutlined />}>
+            <Menu.Item key="1" icon={<DashboardOutlined />}>
               <Link to="/Dashboard">Dashboard</Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<UnorderedListOutlined />}>

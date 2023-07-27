@@ -1,11 +1,11 @@
 import React from 'react';
+import ProfileComponent from '../../../Components/po_profile/ProfileComponent';
 
 const PlacementOfficerPage = () => {
   // Your component logic and JSX here
   return (
-    <div style={{display:'flex',justifyContent:'center'}}>
-      <h2 style={{color:"black"}}>PlacementOfficer Page</h2>
-      {/* Additional content */}
+    <div style={{display:'flex',}}>
+      <ProfileComponent />
     </div>
   );
 };
